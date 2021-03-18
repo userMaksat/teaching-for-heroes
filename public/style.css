@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.straight-corner {
+    border-radius: 2px;
+    border-width: 1.7px;
+}
+button.btn-lg {
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+button.btn-lg:after {
+    content: "»";
+    position: absolute;
+    right: -1%;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+button.btn-lg:hover {
+    padding-left: 10px;
+    padding-right: 7%;
+}
+button.btn-lg:hover:after {
+    opacity: 1;
+    right: 4.5%;
+}
+
+.header-top {
+    background-color: #0da0c5;
+    padding: 0 13%;
+    height: 30px;
+    z-index: 100;
+}
+.header-top div a {
+    font-size: 0.82rem;
+    font-weight: 500;
+    display: inline-block;
+    margin: auto 0;
+}
+.header-top div a span img {
+    max-height: 0.75rem;
+    margin-right: 5px;
+    color: white;
+}
+.header-nav {
+    padding: 30px 13% 0 13%;
+    border-bottom: 0.8px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    z-index: 99;
+}
+.header-nav div a {
+    padding: 0;
+}
+.header-nav div .navbar-brand img {
+    display: block;
+    max-height: 12vh;
+    transition: 0.3s;
+}
+.nav-item-style {
+    margin-right: 10px;
+}
+.nav-link-style {
+    color: #5D5D5D!important;
+    font-size: 1.0rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+.nav-link-style:hover {
+    color: #747474!important; 
+}
+.active-page {
+    color: #0F7162!important;
+}
+.dropdown-menu {
+    padding: 15px;
+}
+.dropdown-menu li a{
+    padding: 10px 50px 10px 10px;
+}
+.dropdown-item {
+    font-size: 1.0rem;
+}
+.dropdown-item, .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+}
+.dropdown-item img, .dropdown-toggle img {
+    display: inline;
+    height: 1.0rem;
+    margin-right: 7px;
+}
+
+#offer {
+    padding: calc(4% + 12vh + 35px) 10% 4% 15%;
+    background-color: #F7F9F9;
+}
+div.col {
+    padding: 0;
+}
+.offer-text h1 {
+    color: #0c71c3;
+    margin-bottom: 6%;
+    font-weight: 700;
+}
+.offer-text p {
+    line-height: 1.4rem;
+    color: #666;
+}
+.offer-text button {
+    margin-top: 4%;
+    font-size: 1.5rem;
+}
+#offer div:last-child img {
+    width: 100%;
+    display: block;
+}
+
+#cards {
+    background-color: #f7f9f9;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.canvas {
+    background-color: #fff;
+    display: block;
+    width: 75%;
+    margin: auto;
+    padding: 4% 0;
+    box-shadow: 0 40px 100px -30px #b3b3b3;
+}
+.cards-box {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.card {
+    text-align: center;
+    display: inline-block;
+    /* margin: 5% auto; */
+    width: 46%;
+    box-shadow: 0 7px 18px #b3b3b3;
+}
+.card-type, .card-heading, .card-subheading, .card-button {
+    margin: 5% auto;
+}
+.card-type {
+    color: #5D5D5D;
+    font-weight: 400;
+    margin-top: 25px;
+}
+.card-heading {
+    font-weight: 600;
+    font-size: 1.11rem;
+}
+.card-subheading {
+    color: #5D5D5D;
+    font-size: 1.11rem;
+}
+.card-button {
+    margin: 2.5% auto 25px;
+    letter-spacing: 0.2px;
+}
+.card1 {margin-right:4%}
+.card2 {margin-left:4%}
+
+#numbers {
+    /* background-color: #f7f9f9; */
+    width: 75%;
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-between;
+}
+.num-box {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: #0DA0C5;
+    margin: 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.num-box h2 {
+    color: #fff;
+    font-family: serif;
+    font-weight: 500;
+}
+.num-box p {
+    color: #fff;
+    font-weight: 600;
+}
+
+#partner {
+    background-color: #f7f9f9;
+    text-align: center;
+}
+#partner h3 {
+    font-size: 1.1rem;
+    color: #5d5d5d;
+    font-weight: 600;
+    margin: 0 auto 30px;
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        text-align: center;
+        position: static;
+    }
+    .header-nav {
+        position: static;
+        padding-top: 0;
+    }
+    #offer {
+        padding-top: 4%;
+    }
+
+    .card {
+        width: 92%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .card1 {margin-right:0}
+    .card2 {margin-left:0}
+}
