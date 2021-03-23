@@ -1,6 +1,7 @@
 const express = require('express');
 const russian = require('./routes/russian');
 const kazakh = require('./routes/kazakh');
+const data = require('./data.js');
 
 const app = express();
 
@@ -10,14 +11,21 @@ app.use(express.static('public'));
 app.use('/ru', russian);
 app.use('/kk', kazakh);
 
-const lang = 'English';
+app.get('/en', function(req, res) {
+    res.redirect('/');
+})
+app.get('/en/:route', function(req, res) {
+    res.redirect('/' + req.params.route);
+});
 
 app.get('/', function(req, res) {
     res.render('home', {
-        title: 'Home',
-        language: lang
+        title: "Home",
+        ...data.common[0],
+        ...data.home[0]
     });
 });
+
 
 app.listen(3000, function() {
     console.log('Server works');

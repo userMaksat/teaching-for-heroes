@@ -1,3 +1,21 @@
+function isElementInViewport (el) {
+
+    // Special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+    );
+}
+var visitedNumbers = false;
+
 var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 function vh(v) {
@@ -12,6 +30,13 @@ window.onscroll = function() {
             $("#navbar-brand").css("height", "12vh");
         }
     }
+
+    if (isElementInViewport($("#numbers")) && !visitedNumbers) {
+        animateValue("lessons-number", 0, 7000, 900);
+        animateValue("teachers-number", 0, 1000, 900);
+        animateValue("students-number", 0, 4000, 900);
+        visitedNumbers = true;
+    }
 }
 
 var navLinks = $(".nav-link");
@@ -25,10 +50,11 @@ for (var i = 0; i < navLinks.length; i++) {
 
 const lang = $("#dropdownMenuLink")[0].innerText;
 var dropdowns = $(".dropdown-item");
-var langs = ["English", "Kazakh", "Russian"];
-langs = langs.filter(x => x !== lang);
+var langs = [{lang: "English", code: "en"}, {lang: "Kazakh", code: "kk"}, {lang: "Russian", code: "ru"}];
+langs = langs.filter(x => x.lang !== lang);
 for (var i = 0; i < dropdowns.length; i++) {
-    dropdowns[i].innerHTML = "<img src='/images/" + langs[i] + ".svg'>" + langs[i];
+    dropdowns[i].innerHTML = "<img src='/images/" + langs[i].lang + ".svg'>" + langs[i].lang;
+    $(dropdowns[i]).attr('href', langs[i].code);
 }
 
 function animateValue(id, start, end, duration) {
@@ -55,13 +81,10 @@ function animateValue(id, start, end, duration) {
         var value = Math.round(end - (remaining * range));
         obj.innerHTML = value;
         if (value == end) {
+            obj.innerHTML += '+';
             clearInterval(timer);
         }
     }
-    
     timer = setInterval(run, stepTime);
     run();
 }
-animateValue("lessons-number", 0, 7000, 800);
-animateValue("teachers-number", 0, 1000, 800);
-animateValue("students-number", 0, 4000, 800);

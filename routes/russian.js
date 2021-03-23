@@ -1,12 +1,12 @@
 const express = require('express');
+const data = require('./../data.js');
 const router = express.Router();
-
-const lang = 'Russian';
 
 router.get('/', (req, res) => {
     res.render('home', {
         title: 'Home',
-        language: lang
+        ...data.common[1],
+        ...data.home[1]
     });
 })
 

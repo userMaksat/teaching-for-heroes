@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/style.css" />
+  <title>
+    <%= title %> - TeachingForHeroes
+  </title>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-dark header-top">
+    <div class="">
+      <a class="navbar-brand" href="mailto:info@teachingforheroes.com"><i class="fas fa-envelope"></i>info@teachingforheroes.com</a>
+      <a href="https://www.facebook.com/teachingforheroes/" style="font-weight:400"><i class="fab fa-facebook-f fa-lg"></i></a>
+      <a href="https://www.instagram.com/teachingforheroes/" style="font-weight:400"><i class="fab fa-instagram fa-lg"></i></a>
+    </div>
+  </nav>
+
+
+  <nav class="navbar fixed-top navbar-expand-xl navbar-light header-nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/<%= languageCode %>/">
+        <img id="navbar-brand" src="/images/logo.png">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item nav-item-style">
+            <a class="nav-link nav-link-style" href="/<%= languageCode %>/" data-value="<%= title %>"><%= home %></a>
+          </li>
+          <li class="nav-item nav-item-style">
+            <a class="nav-link nav-link-style" href="/<%= languageCode %>/about-us" data-value="<%= title %>"><%= aboutUs %></a>
+          </li>
+          <li class="nav-item nav-item-style">
+            <a class="nav-link nav-link-style" href="/<%= languageCode %>/for-students" data-value="<%= title %>"><%= students %></a>
+          </li>
+          <li class="nav-item nav-item-style">
+            <a class="nav-link nav-link-style" href="/<%= languageCode %>/for-teachers" data-value="<%= title %>"><%= teachers %></a>
+          </li>
+          <li class="nav-item nav-item-style">
+            <a class="nav-link nav-link-style" href="/<%= languageCode %>/for-sponsors" data-value="<%= title %>"><%= sponsors %></a>
+          </li>
+          <li class="nav-item nav-item-style">
+              <div class="dropdown">
+                <a class="dropdown-toggle nav-link-style" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><img src="/images/<%= language %>.svg"><%= language %></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#"></a></li>
+                  <li><a class="dropdown-item" href="#"></a></li>
+                </ul>
+              </div>
+          </li>
+          <li class="nav-item nav-item-style">
+            <a class="nav-link nav-link-style" href="#" data-value="<%= title %>"><%= login %></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
