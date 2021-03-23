@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,13 @@
     "node": "14.15.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/userMaksat/teaching-for-heroes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/userMaksat/teaching-for-heroes/issues"
+  },
+  "homepage": "https://github.com/userMaksat/teaching-for-heroes#readme"
 }
