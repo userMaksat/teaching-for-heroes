@@ -1,0 +1,14 @@
+<%- include("./partials/header.ejs") %>
+
+<section id="about-us">
+    <div>
+        <%- include("./people/cover.ejs") %>
+        <% if (forPeople === "students" || forPeople === "teachers") { %>
+            <%- include("./people/participate.ejs") %>
+        <% } else { %>
+            <%- include("./people/support.ejs") %>
+        <% } %>
+    </div>
+</section>
+
+<%- include("./partials/footer.ejs") %>

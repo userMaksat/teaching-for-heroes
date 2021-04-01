@@ -1,0 +1,17 @@
+<div class="steps">
+    <div>
+        <h1><%= howTo %></h1>
+        <div class="row steps-row">
+            <% for (var i = 0; i < 3; i++) { %>
+                <div class="col-lg-4">
+                    <div class="step-box">
+                        <h3><%= step[i].num %></h3>
+                        <h2><%= step[i].heading %></h2>
+                        <p><%= step[i].subheading %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <button type="button" class="btn btn-lg btn-outline-primary straight-corner"><%= apply %></button>
+    </div>
+</div>

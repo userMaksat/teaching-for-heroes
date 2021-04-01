@@ -1,0 +1,36 @@
+<%- include("./partials/header.ejs") %>
+
+<section id="about-us">
+    <div style="padding-bottom: 6%;">
+        <h1><%= heading %></h1>
+        <div class="info-block">
+            <div>
+                <div>
+                    <h2><%= texts[0].heading %></h2>
+                    <p><%= texts[0].paragraphs[0] %></p>
+                    <p><%= texts[0].paragraphs[1].part1 %><b><%= texts[0].paragraphs[1].part2 %></b><%= texts[0].paragraphs[1].part3 %></p>
+                </div>
+
+                <div>
+                    <h2 style="margin-top:40px"><%= texts[1].heading %></h2>
+                    <p><%= texts[1].paragraph %></p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="/images/ilya-kan.jpg">
+                    <h3><%= underImage[0].heading %></h3>
+                    <p><%= underImage[0].subheading %></p>
+                </div>
+
+                <div>
+                    <img src="/images/logo.png">
+                    <h3><%= underImage[1].heading %></h3>
+                    <p><%= underImage[1].subheading %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include("./partials/footer.ejs") %>

@@ -26,8 +26,10 @@ window.onscroll = function() {
     if (viewportWidth > 768) {
         if (document.body.scrollTop > (35 + vh(4)) || document.documentElement.scrollTop > (35 + vh(4))) {
             $("#navbar-brand").css("height", "7.5vh");
+            $("#about-us > div:first-child").css("background-position", "center calc(30px)");
         } else {
             $("#navbar-brand").css("height", "12vh");
+            $("#about-us > div:first-child").css("background-position", "center calc(12vh + 30px)");
         }
     }
 
@@ -54,7 +56,11 @@ var langs = [{lang: "English", code: "en"}, {lang: "Kazakh", code: "kk"}, {lang:
 langs = langs.filter(x => x.lang !== lang);
 for (var i = 0; i < dropdowns.length; i++) {
     dropdowns[i].innerHTML = "<img src='/images/" + langs[i].lang + ".svg'>" + langs[i].lang;
-    $(dropdowns[i]).attr('href', langs[i].code);
+    var pathname = window.location.pathname;
+    if (pathname.substr(0, 3) === "/kk" || pathname.substr(0, 3) === "/ru") {
+        pathname = pathname.substr(3);
+    }
+    $(dropdowns[i]).attr('href', '/' + langs[i].code + pathname);
 }
 
 function animateValue(id, start, end, duration) {

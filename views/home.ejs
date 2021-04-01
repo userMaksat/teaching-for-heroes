@@ -16,7 +16,7 @@
 </section>
 
 <section id="cards">
-  <div class="canvas">
+  <div class="cards-bg">
     <div class="row cards-box">
       <div class="card card1">
         <h2 class="card-type fs-3"><%= cards[0].for %></h2>
@@ -28,7 +28,7 @@
         <h2 class="card-type fs-3"><%= cards[1].for %></h2>
         <h3 class="card-heading"><%= cards[1].heading %></h3>
         <p class="card-subheading"><%= cards[1].subheading %></p>
-        <button type="button" class="btn btn-lg btn-outline-primary straight-corner card-button"><%= cards[0].button %></button>
+        <button type="button" class="btn btn-lg btn-outline-primary straight-corner card-button"><%= cards[1].button %></button>
       </div>
     </div>
   </div>
@@ -58,24 +58,6 @@
 <section id="partner">
   <h3><%= partner %></h3>
   <img src="/images/nativated-logo.png" />
-</section>
-
-<section id="footer">
-  <div class="left-footer-div">
-    <ul>
-      <li><%= contactUs %><br /><a href="mailto:info@teachingforheroes.com" style="font-weight: 600">info@teachingforheroes.com</a></li>
-      <li><a href="/<%= languageCode %>/privacy-policy"><%= privacyPolicy %></a></li>
-      <li><a href="/<%= languageCode %>/terms-and-conditions"><%= termsConditions %></a></li>
-    </ul>
-  </div>
-  <div class="right-footer-div">
-    <div class="soc-icon fb-icon" style="background-color: #3b5998">
-      <a href="https://www.facebook.com/teachingforheroes/" style="font-weight: 400"><i class="fab fa-facebook-f fa-lg"></i></a>
-    </div>
-    <div class="soc-icon ig-icon" style="background-color: #ea2c59">
-      <a href="https://www.instagram.com/teachingforheroes/" style="font-weight: 400"><i class="fab fa-instagram fa-lg"></i></a>
-    </div>
-  </div>
 </section>
 
 <%- include("./partials/footer.ejs") %>

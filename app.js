@@ -26,6 +26,38 @@ app.get('/', function(req, res) {
     });
 });
 
+app.get('/about-us', function(req, res) {
+    res.render('about-us', {
+        title: "About the initiative",
+        ...data.common[0],
+        ...data.aboutUs[0]
+    });
+});
+
+app.get('/for-students', function(req, res) {
+    res.render('for-people', {
+        title: "Students",
+        ...data.common[0],
+        ...data.students[0]
+    });
+});
+
+app.get('/for-teachers', function(req, res) {
+    res.render('for-people', {
+        title: "Teachers",
+        ...data.common[0],
+        ...data.teachers[0]
+    });
+});
+
+app.get('/for-sponsors', function(req, res) {
+    res.render('for-people', {
+        title: "Sponsors",
+        ...data.common[0],
+        ...data.sponsors[0]
+    });
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, function() {
     console.log('Server works');

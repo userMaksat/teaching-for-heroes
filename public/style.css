@@ -24,7 +24,7 @@ button.btn-lg:after {
 }
 button.btn-lg:hover {
     padding-left: 10px;
-    padding-right: 7%;
+    padding-right: 35px;
 }
 button.btn-lg:hover:after {
     opacity: 1;
@@ -76,7 +76,7 @@ button.btn-lg:hover:after {
     color: #747474!important; 
 }
 .active-page {
-    color: #0F7162!important;
+    color: #028673!important;
 }
 .dropdown-menu {
     padding: 15px;
@@ -132,7 +132,7 @@ div.col {
     padding-top: 3%;
     padding-bottom: 3%;
 }
-.canvas {
+.cards-bg {
     background-color: #fff;
     display: block;
     width: 80%;
@@ -225,10 +225,14 @@ div.col {
 
 #footer {
     background-color: #d6d6d6;
+    padding: 3% 0;
+}
+#footer > div {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3% 10%;
 }
 .left-footer-div {
     display: flex;
@@ -262,6 +266,213 @@ div.col {
     list-style: none;
 }
 
+#about-us {
+    padding-top: calc(12vh + 30px);
+}
+#about-us > div:first-child {
+    background-color: #F7F9F9;
+    background-image: url("/images/bg-pattern.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center calc(12vh + 30px);
+    padding-top: 6%;
+    transition: all 0.6s ease;
+}
+#about-us > div > h1 {
+    color: #0c71c3;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 0;
+}
+.info-block {
+    background-color: #fff;
+    width: 77%;
+    margin: 5% auto 0 auto;
+    padding: 4% 3% 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 40px 100px -30px #b3b3b3;
+}
+.info-block > div:first-child h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 3%;
+}
+.info-block > div:first-child p {
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.9;
+    text-align: justify;
+}
+.info-block > div:first-child {
+    width: 55%;
+}
+.info-block > div:last-child {
+    width: 45%;
+    text-align: center;
+}
+.info-block > div:last-child > div h3 {
+    text-align: center;
+    color: #008080;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 15px auto 0;
+}
+.info-block > div:last-child > div p {
+    text-align: center;
+    font-size: 0.92rem;
+    margin: 3px auto 50px;
+    color: #666;
+}
+.info-block > div:last-child > div:first-child img {
+    width: 65%;
+    margin-top: 20%;
+}
+.info-block > div:last-child > div:last-child img {
+    width: 25%;
+}
+
+.cover {
+    width: 72%;
+    margin: 5% auto 1.5% auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cover h2 {
+    font-size: 1.17rem;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    color: #0c71c3;
+}
+.cover p {
+    text-align: justify;
+}
+.cover li, .cover p {
+    font-size: 0.94rem;
+    color: #666;
+}
+.cover > div:first-child {
+    width: 50%;
+    padding-right: 2%;
+}
+.cover > div:last-child {
+    width: 50%;
+}
+.cover > div:last-child > img {
+    width: 40vw;
+    box-shadow: 24px 24px 20px -6px rgba(0, 0, 0, 0.3);
+}
+
+.steps {
+    background-color: #fff;
+}
+.steps > div {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.steps > div > h1 {
+    font-size: 2rem;
+    margin-bottom: 5%;
+    font-weight: 700;
+    text-align: center;
+    color: #0c71c3;
+}
+.steps > div button {
+    margin: 50px auto;
+}
+.steps-row {
+    justify-content: space-around;
+}
+.steps-row div.col-md-4 {
+    flex: 1;
+}
+.steps-row > div:first-child > div{
+    margin: 0 auto 0 0;
+}
+.steps-row > div:nth-child(2) > div {
+    margin: 0 auto;
+}
+.steps-row > div:last-child > div {
+    margin: 0 0 0 auto;
+}
+.step-box {
+    background-color: #f7f9f9;
+    width: 95%;
+    height: 100%;
+    padding: 30px 30px;
+}
+.step-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 2;
+    text-align: left;
+}
+.step-box h2 {
+    color: #0c71c3;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 25px auto;
+}
+.step-box h3 {
+    color: #666;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.sponsors-img {
+    width: 30vw!important;
+    margin-left: 9%;
+}
+
+#email {
+    background-color: #2ea3f2;
+    color: #fff;
+    text-align: center;
+    padding: 2.6% 0;
+}
+#email h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+#email button:hover {
+    color: #2ea3f2;
+}
+
+#grateful {
+    background-color: #fff;
+    padding: 50px 0 1% 0;
+}
+#grateful > h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #0c71c3;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+#grateful > div {
+    width: 70%;
+    margin: 0 auto;
+}
+#grateful > div > div:last-child {
+    justify-content: center;
+}
+#grateful img {
+    width: 20vw;
+    display: block;
+    margin: 0 auto;
+}
+#grateful > div > div:last-child img {
+    width: 25vw;
+}
+
 @media (max-width: 768px) {
     .header-top {
         text-align: center;
@@ -287,11 +498,71 @@ div.col {
         flex-direction: column;
     }
     .num-box {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px 0;
     }
 
     #partner img {
         width: 30%;
+    }
+
+    .right-footer-div {
+        flex-direction: column;
+    }
+    .soc-icon {
+        margin: 5px auto;
+    }
+
+    #about-us {
+        padding-top: 0;
+    }
+
+    .info-block {
+        flex-direction: column;
+    }
+    .info-block > div:first-child {
+        width: 100%;
+    }
+    .info-block > div:last-child {
+        width: 100%;
+    }
+
+    .cover {
+        flex-direction: column;
+        padding-bottom: 4%;
+    }
+    .cover > div:first-child {
+        width: 100%;
+        padding-right: 0;
+    }
+    .cover > div:last-child {
+        width: 100%;
+    }
+    .cover > div:last-child > img {
+        width: 70vw;
+    }
+
+    .steps-row > div {
+        margin: 15px auto;
+    }
+    .steps-row > div:first-child > div{
+        margin: 0 auto 0 auto;
+    }
+    .steps-row > div:nth-child(2) > div {
+        margin: 0 auto 0 auto;
+    }
+    .steps-row > div:last-child > div {
+        margin: 0 auto 0 auto;
+    }
+
+    .sponsors-img {
+        width: 70vw!important;
+        margin-left: 0;
+    }
+
+    #grateful img {
+        width: 70vw;
+    }
+    #grateful > div > div:last-child img {
+        width: 70vw;
     }
 }
