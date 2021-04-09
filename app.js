@@ -1,6 +1,5 @@
 const express = require('express');
-const russian = require('./routes/russian');
-const kazakh = require('./routes/kazakh');
+const subdomain = require('express-subdomain');
 const data = require('./data.js');
 
 const app = express();
@@ -8,8 +7,10 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-app.use('/ru', russian);
-app.use('/kk', kazakh);
+app.use('/ru', require('./routes/russian'));
+app.use('/kk', require('./routes/kazakh'));
+app.use(subdomain('app', require('./routes/app/app')));
+app.use('/app', require('./routes/app/app'));
 
 app.get('/en', function(req, res) {
     res.redirect('/');
